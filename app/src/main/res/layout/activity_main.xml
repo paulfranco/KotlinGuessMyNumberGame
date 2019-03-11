@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +10,71 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25dp"
+        app:fontFamily="sans-serif"
+        android:textSize="25sp"
+        tools:text="question"/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/success_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/success_text_view"
+        android:layout_centerInParent="true"
+        app:fontFamily="sans-serif"
+        android:layout_margin="8dp"
+        android:visibility="invisible"
+        android:textColor="@color/success_color"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:fontFamily="sans-serif"
+        android:textSize="25sp"
+        android:layout_margin="8dp"
+        tools:text="Our number"
+        android:layout_below="@id/success_text_view"/>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="25sp"
+        app:fontFamily="sans-serif"
+        android:layout_margin="8dp"
+        android:text="@string/reset_button_string"
+        android:background="@color/reset_button_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_above="@+id/reset_button">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@drawable/downward_arrow"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@drawable/success"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@drawable/upward_arrow"/>
+    </LinearLayout>
+
+</RelativeLayout>
