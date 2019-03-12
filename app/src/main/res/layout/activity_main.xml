@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/question_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -30,6 +31,7 @@
         android:textSize="25sp"/>
 
     <TextView
+        android:id="@+id/targetNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -47,6 +49,7 @@
         android:textSize="25sp"
         app:fontFamily="sans-serif"
         android:layout_margin="8dp"
+        android:onClick="resetGame"
         android:text="@string/reset_button_string"
         android:background="@color/reset_button_color"/>
 
@@ -62,15 +65,18 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:onClick="arrowDown"
             android:src="@drawable/downward_arrow"/>
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:onClick="successFunction"
             android:src="@drawable/success"/>
 
         <ImageView
+            android:onClick="arrowUp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
